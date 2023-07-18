@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	list-style: none;
+}
+/* a 태그 */
+.user_header_a{
+	text-decoration: none;
+}
+
+/* 화면 전체 랩 */
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+/*content wrap*/
+.wrap{
+	width: 100%;
+	margin: auto;
+}
+
+.admin_wrap{
+	height: 100%;
+}
+
+/* 윗 부분 바 */
+.top_gnb_area{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	position: relative;
+	list-style: none;
+}
+
+.top_gnb_area a{
+	width: 150px;
+	height: 50px;
+	margin-left: 20px;
+}
+
+/* 로고 */
+.user_header_logo{
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 200px;
+	height: auto;
+	object-fit:cover;
+}
+
+/* 윗 부분 바 왼쪽 */
+.top_gnb_area .top_left{
+	position: absolute;
+	top: 10px;
+	left: 250px;
+}
+.top_gnb_area .top_left li{
+	list-style: none;
+	float: left;
+	padding: 13px 5px 0 10px;
+}
+.top_gnb_area .top_left li a{
+	color:black; 
+	font-size:15px; 
+	cursor: pointer;
+}
+.a:link{
+	color:black; 
+	text-decoration: none;
+}
+.a:visited{
+	color: black; 
+	text-decoration: none;
+}
+
+/* 윗 부분 바 오른쪽 */
+.top_gnb_area .top_right{
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
+.top_gnb_area .top_right li{
+	list-style: none;
+	float: left;
+	padding: 13px 15px 0 20px;	
+}
+.top_gnb_area .top_right li a{
+	color:black; 
+	font-size:15px;
+	cursor: pointer;
+}
+.a:link{
+	color:black
+}
+.a:visited{
+	color: black;
+}
+
+/* 로그인 성공 시 메뉴바 */
+.login_success_area > a{
+	font-size: 13px;
+	font-weight: 900;
+	display: inline-block;
+	top:2px;
+	position: absolute;	
+}

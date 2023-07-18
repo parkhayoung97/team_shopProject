@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.tam.mapper.CategoryMapper">
+
+   <!-- criteria(검색조건) -->
+   <sql id="criteria">
+      <trim prefix="AND (" suffix=")" prefixOverrides="OR">
+         <foreach collection="typeArr" item="type">
+            <trim prefix="OR">
+               <choose>
+                  <when test="type == 'P'.toString()">
+                     prodName like '%'||#{keyword}||'%'
+                  </when>
+                  <when test="type == 'C'.toString()">
+                     categoryNum like '%'||#{keyword}||'%'
+                  </when>
+               </choose>
+            </trim>
+         </foreach>
+      </trim>
+   </sql>
+
+   <!-- 카테고리 조회 -->
+   <select id="getCateList" resultType="com.tam.model.CateVO">
+      select cateCode, cateName from category
+   </select>
+
+   <!-- 전체 상품 조회 -->
+   <select id="getProdList" resultType="com.tam.model.ProductVO">
+      <![CDATA[
+      select rn, prodNum, categoryNum, prodName, price, img1, img2, img3, prodInfo, stock from (
+            select rownum as rn, prodNum, categoryNum, prodName, price, img1, img2, img3, prodInfo, stock
+            from product where rownum <= #{pageNum} * #{amount} 
+         ]]>
+            <!-- 검색 기능 추가 -->
+            <if test="keyword != null">
+               <include refid="criteria"></include>
+               <!-- and title like '%'||#{keyword}||'%' -->
+            </if>
+         <![CDATA[
+            )
+            where rn > (#{pageNum} -1) * #{amount}
+         ]]>
+   </select>
+   
+   <!-- 카테고리별 상품 조회 -->
+   <select id="getCateProd" resultType="com.tam.model.ProductVO">
+   	<![CDATA[
+      select rn, prodNum, categoryNum, prodName, price, img1, img2, img3, prodInfo, stock from (
+            select rownum as rn, prodNum, categoryNum, prodName, price, img1, img2, img3, prodInfo, stock
+            from product where rownum <= #{pageNum} * #{amount} 
+         ]]>
+               and categoryNum = #{keyword}
+         <![CDATA[
+            )
+            where rn > (#{pageNum} -1) * #{amount}
+         ]]>
+   </select>
+   
+   <!-- 상품 총 갯수 -->
+   <select id="getProdTotal" resultType="int">
+      select count(*) from product
+      where categoryNum > 0
+      <!-- 검색 기능 추가 -->
+         <if test="keyword != null">
+            <include refid="criteria"></include>
+         </if> 
+   </select>
+</mapper>

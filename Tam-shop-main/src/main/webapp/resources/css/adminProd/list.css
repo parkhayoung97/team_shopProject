@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+/*관리자 페이지 컨텐츠 영역*/
+.admin_content_wrap {
+	margin: 0 auto;
+	width: 90%;
+	height: 90%;
+	margin-top: 40px;
+}
+/* 목록 부분 */
+.list_wrap{
+	height: auto;
+}
+
+/*상품 등록 button 영역*/
+.top_btn {
+   font-size: 15px;
+   padding: 6px 12px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   font-weight: 600;
+   margin-right: 50px;
+   width: 150px;
+   height: 50px;
+   cursor: pointer; 
+   margin-bottom: 20px;
+   border-radius: 5px;
+}
+
+/* 상품목록 list */
+.prodList {
+	font-size: 15px;
+	height: 20%;
+	border-radius: 5px;
+	border-spacing: 0;
+}
+
+thead{
+	background-color: #ccc;
+	height: 40px;
+}
+
+tbody > tr{
+	height: 30px;
+}
+
+tbody tr:hover { 
+	background-color: skyblue;
+}
+
+.th_column_1 {width: 150px;}
+.th_column_2 {width: 150px;}
+.th_column_3 {width: 250px;}
+.th_column_4 {width: 150px;}
+.th_column_5 {width: 150px;}
+				
+.th_column_1:focus{
+	background-color: #ccc;
+}
+/*값이 없을 때*/
+.table_empty {
+	height: 50px;
+	text-align: center;
+	margin: 200px 0px 215px 0px;
+	font-size: 25px;
+}
+
+/*검색 영역*/
+.search_wrap {
+	margin-top: 15px;
+	height: auto;
+}
+.search_input {
+	position: relative;
+	text-align: center;
+}
+.search_input input[name='keyword'] {
+	padding: 4px 10px;
+	fint-size: 15px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.search_btn {
+	height: 32px;
+	width: 80px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 20px;
+	position: absolute;
+	margin-left: 15px;
+	background-color: #c3daf7;
+}
+
+/* 페이지 이동 영역 */
+.pageMaker_wrap{
+	height: 20%;
+}
+.pageMaker {
+   list-style: none;
+   display: inline-block;
+}
+.pageMaker li {
+   float: left;
+   font-size: 20px;
+   margin-left: 18px;
+   padding: 7px;
+   font-weight: 500;
+}
+.pageMaker_btn {
+	position: relative;
+}
+.pageMaker_btn:hover {
+	background: gray;
+}
+
+#moveForm{
+	height: 0%;
+}
+
+.admin_list_01 {
+	background-color: #ccc;
+}

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style: none;
+}
+
+/* footer navi 영역 */
+.footer_nav{
+	width: 100%;
+	height: 50px;
+}
+
+.footer_nav_container{
+	width: 100%;
+	height: 100%;
+	background-color: skyblue;
+	color: white;
+}
+.footer_nav_container>ul{
+	font-weight: bold;
+	float: left;
+	list-style: none;
+	position: relative;
+	padding-top: 10px;
+	line-height: 27px;
+	font-family: dotum;
+	margin-left:20px;
+}
+.footer_nav_container>ul>li{
+	display: inline;
+	width: 45px;
+	height: 19px;
+	padding: 10px 9px 0 10px;
+}
+.footer_nav_container>ul>span{
+	margin: 0 4px;
+}
+
+/* footer 영역 */
+.footer{
+	width: 100%;
+	height: 140px;
+	background-color: black;
+	padding-bottom: 50px;	
+}
+
+.footer_container{
+	width: 100%;
+	height: 100%;
+	float: left;	
+}
+
+/* 아래 부분 바 왼쪽 */
+.footer_left{
+	float: left;
+	width: 170px;
+	margin-left: 60px;
+	margin-top: 30px;
+}
+.footer_left>img{
+	width: 150%;
+	height: 70%;
+	float: left;
+}
+
+/* 아래 부분 바 오른쪽 */
+.footer_right{
+	float: left;
+	width: 680px;
+	margin-left:140px;
+	margin-top: 10px;
+	color: white;
+}
+
+/* float 속성 해제 */
+.clearfix{
+	clear: both;
+}

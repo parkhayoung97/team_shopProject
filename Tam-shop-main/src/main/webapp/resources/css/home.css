@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+
+/* 홈페이지 메인 */
+.content_area{
+	width: 100%;
+	height: 100%;
+	background-image: url("/resources/img/home.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* 홈페이지 메인 중앙 글 */
+.content_area > p{
+	color: white;
+	font-size: 45px;
+	font-weight: 900;
+	position: relative;
+	height: 50px;
+	top: 750px;
+	text-align: center;
+	
+}
+
+/* 홈페이지 메인 중앙 버튼 */
+.content_area > .btn-navi{
+	display: inline-block;
+	position: relative;
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	top: 800px;
+	color: black;
+	border: 1px solid white;
+	margin: 10px;
+}

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/*화면 전체 랩*/
+.wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: #F2F2F2;
+}
+
+/* content wrap */
+.wrap {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+/* 윗 부분 바 */
+.top_gnb_area{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	list-style: none;
+	background-color: white;
+}
+
+.top_gnb_area a{
+	width: 150px;
+	height: 50px;
+	margin-left: 20px;
+}
+
+/* 로고 */
+.user_header_logo{
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 200px;
+	height: auto;
+	object-fit:cover;
+}
+
+/* 윗 부분 바 왼쪽 */
+.top_gnb_area .top_left{
+	position: absolute;
+	top: 23px;
+	left: 300px;
+}
+
+/* 윗 부분 바 오른쪽 */
+.top_gnb_area .top_right{
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
+.top_gnb_area .top_right li{
+	list-style: none;
+	float: left;
+	padding: 13px 15px 0 20px;	
+}
+.top_gnb_area .top_right li a{
+	color:black; 
+	font-size:15px;
+	cursor: pointer;
+}
+.a:link{
+	color:black
+}
+.a:visited{
+	color: black;
+}
+
+.admin_wrap {
+	background-color: white;
+	width: 85%;
+	height: auto;
+	float: right;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+/* 홈페이지 메인 */
+.content_area {
+	width: 100%;
+	height: 1000px;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* 구간 나누기 */
+/* 칼럼 컨테이너 */
+.column-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* 왼쪽 칼럼 */
+.admin_navi_wrap {
+	float: left;
+	width: 12%;
+	height: 100%;
+	text-align: left;
+	margin-left: 35px;
+}
+
+/* 오른쪽 칼럼 */
+.admin_wrap {
+	float: right;
+	width: 80%;
+	height: 80%;
+	text-align: left;
+	margin-top: 50px;
+	margin-right: 65px;
+}
+
+.admin_navi_wrap ul {
+	margin-top: 50px;
+	height: 50%;
+	border: 1px solid #ccc;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.admin_navi_wrap li {
+	display: block;
+	height: 50px;
+	line-height: 40px;
+
+	border-bottom: 1px solid #ccc;
+}
+
+.admin_navi_wrap li a {
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+.a:link{
+	color:black
+}
+.a:visited{
+	color: black;
+}
